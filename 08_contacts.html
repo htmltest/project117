@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sharodekor</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+
+                        <a href="#" class="header-mobile-menu-link"></a>
+
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="header-title">Шарики<br /> по любому поводу</div>
+
+                        <div class="header-text">
+                            <div class="header-phone"><a href="tel:+74999554134">+7 (499) 955-41-34</a></div>
+                            <div class="header-schedule">Пн–Вс: 10:00 - 19:00</div>
+                        </div>
+
+                        <a href="#" class="header-search-link-mobile"></a>
+
+                        <div class="header-user">
+                            <a href="#" class="header-user-login">Вход</a>
+                        </div>
+
+                        <div class="header-cart">
+                            <a href="#" class="header-cart-value"><span>2</span></a>
+                        </div>
+
+                        <a href="#" class="header-compare"></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"></a>
+                            <form action="#" method="post">
+                                <div class="form-input"><input type="text" name="search" value="" class="required" placeholder="ввод запроса" autocomplete="off" /></div>
+                                <div class="form-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">Шары с гелием</a></li>
+                            <li>
+                                <a href="#">Товары к празднику</a>
+                                <div class="nav-sub">
+                                    <ul>
+                                        <li><a href="#">Открытки</a></li>
+                                        <li><a href="#">Свечки</a></li>
+                                        <li><a href="#">Грузики</a></li>
+                                        <li><a href="#">Хлопушки</a></li>
+                                        <li><a href="#">Сервировка стола</a></li>
+                                        <li><a href="#">Гирлянды</a></li>
+                                        <li><a href="#">Головные уборы</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">Надувные игрушки</a></li>
+                                        <li><a href="#">Наклейки</a></li>
+                                        <li><a href="#">Язычки-гудки</a></li>
+                                        <li><a href="#">Подарки</a></li>
+                                        <li><a href="#">Сладости</a></li>
+                                        <li><a href="#">Мягкие игрушки</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">По событиям</a></li>
+                            <li><a href="#">По мультгероям</a></li>
+                            <li class="active"><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">sharodecor</a><span></span>Контакты</div>
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-wrap">
+
+                            <!-- contacts info -->
+                            <div class="contacts-info">
+                                <h1>Контакты</h1>
+                                <dl>
+                                    <dt>Адрес:</dt>
+                                    <dd>Москва, ул. 1-ый магистральный тупик, д. 10, корп.1,  БЦ "ПРИИСК"</dd>
+                                    <dt>Режим работы:</dt>
+                                    <dd>пн–пт, 10:00 – 22:00</dd>
+                                    <dt>Телефон:</dt>
+                                    <dd>+7 (495) 955-45-20</dd>
+                                    <dt>Электронная почта:</dt>
+                                    <dd><a href="mailto:info@sharedecor.ru">info@sharedecor.ru</a></dd>
+                                </dl>
+                            </div>
+                            <!-- contacts info END -->
+
+                            <!-- contacts map -->
+                            <div class="contacts-map">
+                                <div id="map"></div>
+                                <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                                <script>
+                                    ymaps.ready(init);
+
+                                    var myMap;
+                                    var coords = [55.767003, 37.526232];
+
+                                    function init() {
+                                        myMap = new ymaps.Map('map', {
+                                            center: coords,
+                                            zoom: 16,
+                                            controls: []
+                                        });
+
+                                        myMap.controls.add('zoomControl');
+                                        myMap.behaviors.disable('scrollZoom');
+
+                                        var myPlacemark = new ymaps.Placemark(coords, {}, {
+                                            iconLayout: 'default#image',
+                                            iconImageHref: 'images/map-icon.png',
+                                            iconImageSize: [109, 104],
+                                            iconImageOffset: [-55, -104]
+                                        });
+                                        myMap.geoObjects.add(myPlacemark);
+                                        myMap.setCenter(coords);
+                                    }
+                                </script>
+                            </div>
+                            <!-- contacts map END -->
+
+                            <!-- contacts form -->
+                            <div class="contacts-form">
+                                <h3>ФОРМА ОБРАТНОЙ СВЯЗИ</h3>
+                                <form action="#" method="post">
+                                    <div class="form-row">
+                                        <div class="form-label">Ваше Имя <span>*</span></div>
+                                        <div class="form-field">
+                                            <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-label">Эл. почта <span>*</span></div>
+                                        <div class="form-field">
+                                            <div class="form-input"><input type="text" name="email" value="" class="required email" /></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-label">Контактный телефон <span>*</span></div>
+                                        <div class="form-field">
+                                            <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-label">Ваше сообщение <span>*</span></div>
+                                        <div class="form-field">
+                                            <div class="form-input"><textarea name="comment" rows="5" cols="10" class="required"></textarea></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-checkbox">
+                                            <label><input type="checkbox" name="private" checked="checked" class="required" /><span></span><strong>Я принимаю условия <a href="#" class="target">политики конфиденциальности</a></strong></label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <div class="form-submit">
+                                                <input type="submit" value="отправить сообщение" class="btn-submit" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">* — обязательные для заполнения поля</div>
+                                </form>
+                            </div>
+                            <!-- contacts form END -->
+
+                        </div>
+                    </div>
+                    <!-- content END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+
+                <div class="footer-contacts">
+                    <div class="footer-contacts-header">
+                        <div class="logo"></div>
+                        <div class="header-title">Шарики<br /> по любому поводу</div>
+                    </div>
+                    <dl>
+                        <dt>Телефон</dt>
+                        <dd><strong>+7 (495) 955-45-20</strong></dd>
+
+                        <dt>Адрес</dt>
+                        <dd>Москва, ул. 1-ый магистральный тупик, д. 10, корп.1, БЦ "ПРИИСК"</dd>
+
+                        <dt>Время работы</dt>
+                        <dd>10:00 - 22:00</dd>
+                    </dl>
+                </div>
+
+                <div class="footer-menu">
+                    <div class="footer-menu-catalogue">
+                        <div class="footer-menu-title">Каталог</div>
+                        <ul>
+                            <li><a href="#">Шары с гелием</a></li>
+                            <li><a href="#">Товары к празднику</a></li>
+                            <li><a href="#">По событиям</a></li>
+                            <li><a href="#">По мультгероям</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-nav">
+                        <div class="footer-menu-title">Информация</div>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div class="container">
+                    <div class="copyrights">© Компания Sharedecor, 2018</div>
+                    <div class="developer">Разработка сайта: <a href="#" target="_blank">Bilingo Digital Studio</a></div>
+                    <div class="social">
+                        <a href="#" class="social-vk" target="_blank"></a>
+                        <a href="#" class="social-fb" target="_blank"></a>
+                        <a href="#" class="social-in" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
