@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sharodekor</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+
+                        <a href="#" class="header-mobile-menu-link"></a>
+
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="header-title">Шарики<br /> по любому поводу</div>
+
+                        <div class="header-text">
+                            <div class="header-phone"><a href="tel:+74999554134">+7 (499) 955-41-34</a></div>
+                            <div class="header-schedule">Пн–Вс: 10:00 - 19:00</div>
+                        </div>
+
+                        <a href="#" class="header-search-link-mobile"></a>
+
+                        <div class="header-user">
+                            <a href="#" class="header-user-login">Вход</a>
+                        </div>
+
+                        <div class="header-cart">
+                            <a href="#" class="header-cart-value"><span>2</span></a>
+                        </div>
+
+                        <a href="#" class="header-compare"></a>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"></a>
+                            <form action="#" method="post">
+                                <div class="form-input"><input type="text" name="search" value="" class="required" placeholder="ввод запроса" autocomplete="off" /></div>
+                                <div class="form-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">Шары с гелием</a></li>
+                            <li>
+                                <a href="#">Товары к празднику</a>
+                                <div class="nav-sub">
+                                    <ul>
+                                        <li><a href="#">Открытки</a></li>
+                                        <li><a href="#">Свечки</a></li>
+                                        <li><a href="#">Грузики</a></li>
+                                        <li><a href="#">Хлопушки</a></li>
+                                        <li><a href="#">Сервировка стола</a></li>
+                                        <li><a href="#">Гирлянды</a></li>
+                                        <li><a href="#">Головные уборы</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">Надувные игрушки</a></li>
+                                        <li><a href="#">Наклейки</a></li>
+                                        <li><a href="#">Язычки-гудки</a></li>
+                                        <li><a href="#">Подарки</a></li>
+                                        <li><a href="#">Сладости</a></li>
+                                        <li><a href="#">Мягкие игрушки</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">По событиям</a></li>
+                            <li><a href="#">По мультгероям</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">sharodecor</a><span></span><a href="#">корзина</a><span></span>оформление заказа</div>
+
+                    <!-- content -->
+                    <div class="content">
+                        <div class="content-wrap">
+
+                            <h1>Оформление заказа</h1>
+
+                            <form action="/personal/order/make/" method="POST" name="ORDER_FORM" id="bx-soa-order-form" enctype="multipart/form-data">
+                                <input type="hidden" name="sessid" id="sessid" value="68a9d68ea7837296f82b0e50b4265c51" />
+                                <input type="hidden" name="action" value="saveOrderAjax" />
+                                <input type="hidden" name="location_type" value="code" />
+                                <input type="hidden" name="BUYER_STORE" id="BUYER_STORE" value="0" />
+
+                                <div id="bx-soa-order" class="bx-green">
+
+                                    <!-- MAIN BLOCK -->
+                                    <div class="bx-soa">
+
+                                        <div id="bx-soa-main-errors">
+                                            <div class="alert alert-danger" style="display:none"></div>
+                                        </div>
+
+                                        <!-- AUTH BLOCK -->
+                                        <div id="bx-soa-auth" class="bx-soa-section bx-soa-auth" style="display:none">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Авторизация
+                                                </h2>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- DUPLICATE MOBILE ORDER SAVE BLOCK -->
+                                        <div id="bx-soa-total-mobile" style="margin-bottom: 6px;"></div>
+
+                                        <!-- BASKET ITEMS BLOCK -->
+                                        <div id="bx-soa-basket" data-visited="true" class="bx-soa-section bx-active bx-selected">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Товары в заказе
+                                                </h2>
+                                                <div class="text-right"><a href="javascript:void(0)" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content">
+                                                <div class="bx-soa-table-fade">
+                                                    <div style="overflow-x: auto; overflow-y: hidden;">
+                                                        <div class="bx-soa-item-table">
+                                                            <div class="bx-soa-item-tr bx-soa-basket-info bx-soa-item-tr-first">
+                                                                <div style="min-width: 300px;" class="bx-soa-item-td">
+                                                                    <div class="bx-soa-item-block">
+                                                                        <div class="bx-soa-item-img-block">
+                                                                            <a href="#">
+                                                                                <div class="bx-soa-item-imgcontainer" style="background-image:url(files/catalogue-01.jpg); background-image:-webkit-image-set(url(files/catalogue-01.jpg) 1x, url(files/catalogue-01.jpg) 2x)"></div>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="bx-soa-item-content">
+                                                                            <div class="bx-soa-item-title">
+                                                                                <a href="#">Облако из шаров «Ассорти»</a>
+                                                                            </div>
+                                                                            <div class="bx-scu-container">
+                                                                                <div style="text-align: left;" class="bx-soa-item-td-text">артикул: 3648798</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+                                                                    <div class="bx-soa-item-td-title">Количество</div>
+                                                                    <div class="bx-soa-item-td-text"><span>25 шт.</span></div>
+                                                                </div>
+                                                                <div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+                                                                    <div class="bx-soa-item-td-title">Сумма</div>
+                                                                    <div class="bx-soa-item-td-text"><strong class="bx-price all">13 990 Р</strong></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="bx-soa-item-tr bx-soa-basket-info">
+                                                                <div style="min-width: 300px;" class="bx-soa-item-td">
+                                                                    <div class="bx-soa-item-block">
+                                                                        <div class="bx-soa-item-img-block">
+                                                                            <a href="#">
+                                                                                <div class="bx-soa-item-imgcontainer" style="background-image: url(files/catalogue-02.jpg);background-image: -webkit-image-set(url(files/catalogue-02.jpg) 1x, url(files/catalogue-02.jpg) 2x)"></div>
+                                                                            </a>
+                                                                        </div>
+                                                                        <div class="bx-soa-item-content">
+                                                                            <div class="bx-soa-item-title">
+                                                                                <a href="#">Облако из шаров «Ассорти»</a>
+                                                                            </div>
+                                                                            <div class="bx-scu-container">
+                                                                                <div style="text-align: left;" class="bx-soa-item-td-text">артикул: 3648798</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+                                                                    <div class="bx-soa-item-td-title">Количество</div>
+                                                                    <div class="bx-soa-item-td-text"><span>50 шт.</span></div>
+                                                                </div>
+                                                                <div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+                                                                    <div class="bx-soa-item-td-title">Сумма</div>
+                                                                    <div class="bx-soa-item-td-text"><strong class="bx-price all">13 990 Р</strong></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bx-soa-more"><div class="bx-soa-more-btn"><a href="" class="pull-right btn btn-default btn-md">Далее</a></div></div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- REGION BLOCK -->
+                                        <div id="bx-soa-region" data-visited="false" class="bx-soa-section bx-active">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Плательщик
+                                                </h2>
+                                                <div class="text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- DELIVERY BLOCK -->
+                                        <div id="bx-soa-delivery" data-visited="false" class="bx-soa-section bx-active" >
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Доставка
+                                                </h2>
+                                                <div class="text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- PICKUP BLOCK -->
+                                        <div id="bx-soa-pickup" data-visited="false" class="bx-soa-section" style="display:none">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                </h2>
+                                                <div class="text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- PAY SYSTEMS BLOCK -->
+                                        <div id="bx-soa-paysystem" data-visited="false" class="bx-soa-section bx-active">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Оплата
+                                               </h2>
+                                                <div class="text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- BUYER PROPS BLOCK -->
+                                        <div id="bx-soa-properties" data-visited="false" class="bx-soa-section bx-active">
+                                            <div class="bx-soa-section-title-container">
+                                                <h2 class="bx-soa-section-title">
+                                                    <span class="bx-soa-section-title-count"></span>
+                                                    Контактные данные
+                                                </h2>
+                                                <div class="text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+                                            </div>
+                                            <div class="bx-soa-section-content"></div>
+                                        </div>
+
+                                        <!-- ORDER SAVE BLOCK -->
+                                        <div id="bx-soa-orderSave" class="hidden-xs">
+                                            <a href="javascript:void(0)" style="margin: 10px 0" class="pull-right btn btn-default btn-lg">Оформить заказ</a>
+                                        </div>
+
+                                        <div style="display: none;">
+                                            <div id='bx-soa-basket-hidden' class="bx-soa-section"></div>
+                                            <div id='bx-soa-region-hidden' class="bx-soa-section"></div>
+                                            <div id='bx-soa-paysystem-hidden' class="bx-soa-section"></div>
+                                            <div id='bx-soa-delivery-hidden' class="bx-soa-section"></div>
+                                            <div id='bx-soa-pickup-hidden' class="bx-soa-section"></div>
+                                            <div id="bx-soa-properties-hidden" class="bx-soa-section"></div>
+                                            <div id="bx-soa-auth-hidden" class="bx-soa-section">
+                                                <div class="bx-soa-section-content reg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- SIDEBAR BLOCK -->
+                                    <div id="bx-soa-total" class="bx-soa-sidebar">
+                                        <div class="bx-soa-cart-total-ghost"></div>
+                                        <div class="bx-soa-cart-total">
+                                            <div class="bx-soa-cart-total-line">
+                                                <span class="bx-soa-cart-t">Стоимость товаров</span>
+                                                <span class="bx-soa-cart-d">26 500 Р</span>
+                                            </div>
+                                            <div class="bx-soa-cart-total-line">
+                                                <span class="bx-soa-cart-t">Доставка</span>
+                                                <span class="bx-soa-cart-d">2 000 Р</span>
+                                            </div>
+                                            <div class="bx-soa-cart-total-line">
+                                                <span class="bx-soa-cart-t">Скидка</span>
+                                                <span class="bx-soa-cart-d">200 Р</span>
+                                            </div>
+                                            <div class="bx-soa-cart-total-line bx-soa-cart-total-line-total">
+                                                <span class="bx-soa-cart-t">Итого</span>
+                                                <span class="bx-soa-cart-d">35 000 Р</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!-- content END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+
+                <div class="footer-contacts">
+                    <div class="footer-contacts-header">
+                        <div class="logo"></div>
+                        <div class="header-title">Шарики<br /> по любому поводу</div>
+                    </div>
+                    <dl>
+                        <dt>Телефон</dt>
+                        <dd><strong>+7 (495) 955-45-20</strong></dd>
+
+                        <dt>Адрес</dt>
+                        <dd>Москва, ул. 1-ый магистральный тупик, д. 10, корп.1, БЦ "ПРИИСК"</dd>
+
+                        <dt>Время работы</dt>
+                        <dd>10:00 - 22:00</dd>
+                    </dl>
+                </div>
+
+                <div class="footer-menu">
+                    <div class="footer-menu-catalogue">
+                        <div class="footer-menu-title">Каталог</div>
+                        <ul>
+                            <li><a href="#">Шары с гелием</a></li>
+                            <li><a href="#">Товары к празднику</a></li>
+                            <li><a href="#">По событиям</a></li>
+                            <li><a href="#">По мультгероям</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-nav">
+                        <div class="footer-menu-title">Информация</div>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bottom">
+                <div class="container">
+                    <div class="copyrights">© Компания Sharedecor, 2018</div>
+                    <div class="developer">Разработка сайта: <a href="#" target="_blank">Bilingo Digital Studio</a></div>
+                    <div class="social">
+                        <a href="#" class="social-vk" target="_blank"></a>
+                        <a href="#" class="social-fb" target="_blank"></a>
+                        <a href="#" class="social-in" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
