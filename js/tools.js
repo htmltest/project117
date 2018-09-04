@@ -345,6 +345,55 @@ $(document).ready(function() {
         });
     });
 
+    $('.header-cart-value').click(function(e) {
+        $('html').toggleClass('header-cart-open');
+        e.preventDefault();
+    });
+
+    $('.header-cart').click(function(e) {
+        if ($(e.target).hasClass('header-cart')) {
+            $('html').removeClass('header-cart-open');
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.header-cart').length == 0) {
+            $('html').removeClass('header-cart-open');
+        }
+    });
+
+    $('.compare-list').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    }).on('setPosition', function(slick) {
+        $('.slick-dots').css({'top': $('.compare-list-wrap .catalogue-item-inner:first').outerHeight()});
+    });
+
+    $(window).on('load resize', function() {
+        $('.compare-list-sep').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
+        $('.compare-list-wrap .slick-dots').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
+    });
+
 });
 
 function reloadFilter() {
@@ -360,12 +409,16 @@ function reloadFilter() {
 $(window).on('resize', function() {
     $('.form-select select').chosen('destroy');
     $('.form-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
+
+    $('.soa-property-container select').chosen('destroy');
+    $('.soa-property-container select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
 });
 
 function initForm(curForm) {
     curForm.find('input.maskPhone').mask('+7 (999) 999-99-99');
 
     curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
+    curForm.find('.soa-property-container select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
 
     curForm.find('.form-file input').change(function() {
         var curInput = $(this);
