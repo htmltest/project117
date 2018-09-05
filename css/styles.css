@@ -909,8 +909,8 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 @media screen and (min-width:1200px) {
     .catalogue-item-name a:hover {color:#0058ff}
 }
-.catalogue-item-art {font-size:13px; line-height:25px; font-weight:300; letter-spacing:0; text-transform:uppercase; color:#a0a0a0; text-align:center; padding:0 30px}
-.catalogue-item-count {text-align:center; text-transform:uppercase; color:#00; font-weight:300; padding:11px 0 0 0}
+.catalogue-item-art {font-size:13px; line-height:25px; font-weight:300; letter-spacing:0; text-transform:uppercase; color:#424242; text-align:center; padding:0 30px}
+.catalogue-item-count {text-align:center; text-transform:uppercase; color:#000; font-weight:300; padding:11px 0 0 0}
 .catalogue-item-count-title {display:inline-block; vertical-align:middle; font-size:13px; line-height:25px; letter-spacing:0}
 .catalogue-item-count label {display:inline-block; vertical-align:middle; font-size:13px; line-height:25px; letter-spacing:0; cursor:pointer; margin:0 0 0 9px}
 .catalogue-item-count label input {display:none}
@@ -1095,7 +1095,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 
 .product-info {margin:37px 0 0 0; padding:0}
 .product-info::after {content:""; display:block; clear:both}
-.product-info dt {float:left; clear:left; width:75px; margin:0; padding:0; color:#b1b1b1; text-transform:uppercase; font-weight:300; font-size:13px}
+.product-info dt {float:left; clear:left; width:75px; margin:0; padding:0; color:#424242; text-transform:uppercase; font-weight:300; font-size:13px}
 .product-info dd {margin:0 0 0 75px; padding:0; color:#4b5a62}
 .product-info dd .bx_filter_parameters_box_container {margin-top:4px; margin-bottom:15px; position:relative; left:-3px}
 .product-info dd input:first-child+.bx_filter_param_label,
@@ -1158,7 +1158,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 @media screen and (min-width:1200px) {
     .basket-title a:hover {color:#0058ff}
 }
-.basket-art {padding:10px 0 0 0; font-size:13px; color:#a0a0a0; font-weight:300; text-transform:uppercase}
+.basket-art {padding:10px 0 0 0; font-size:13px; color:#424242; font-weight:300; text-transform:uppercase}
 .basket-row-count {display:table-cell; vertical-align:middle; padding:40px 0 40px 30px}
 .basket-row-count .catalogue-item-count {text-align:left; color:#000}
 .basket-row-count .catalogue-item-count-title {display:block}
@@ -1176,7 +1176,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 .basket-results {float:right; width:420px; margin:30px 0 0 0; background:#fff; padding:22px 45px 25px 45px}
 .basket-info-row {font-weight:300}
 .basket-info-row::after {content:""; display:block; clear:both}
-.basket-info-title {float:left; color:#b1b1b1}
+.basket-info-title {float:left; color:#424242}
 .basket-info-value {float:right; color:#000}
 .basket-summ {font-weight:bold; text-transform:uppercase; border-top:1px solid #ebebeb; padding:24px 0 0 0; margin:28px 0 0 0; color:#000; font-size:18px}
 .basket-summ::after {content:""; display:block; clear:both}
@@ -1207,7 +1207,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 .contacts-info h1 {margin-bottom:-3px}
 .contacts-info dl {margin:22px 0; padding:0; line-height:22px; font-weight:300}
 .contacts-info dl::after {content:""; display:block; clear:both}
-.contacts-info dt {float:left; clear:left; margin:0; padding:8px 0 0 0; width:180px; color:#b1b1b1}
+.contacts-info dt {float:left; clear:left; margin:0; padding:8px 0 0 0; width:180px; color:#424242}
 .contacts-info dd {margin:0 0 0 190px; padding:8px 0 0 0}
 
 @media screen and (max-width:1199px) {
@@ -1286,7 +1286,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 @media screen and (min-width:1200px) {
     .bx-soa-item-title a:hover {color:#0058ff}
 }
-.bx-scu-container {padding:10px 0 0 0; font-size:13px; color:#a0a0a0; font-weight:300; text-transform:uppercase}
+.bx-scu-container {padding:10px 0 0 0; font-size:13px; color:#424242; font-weight:300; text-transform:uppercase}
 .bx-soa-item-properties {padding:0 30px 0 0; color:#000; font-size:18px; font-weight:bold}
 
 @media screen and (max-width:1199px) {
@@ -1371,7 +1371,7 @@ input:first-child+.bx_filter_param_label+input+.bx_filter_param_label+input+.bx_
 .bx-soa-sidebar {float:right; width:352px; background:#fff; padding:22px 45px 25px 45px; margin:78px 0 0 0}
 .bx-soa-cart-total-line {font-weight:300}
 .bx-soa-cart-total-line::after {content:""; display:block; clear:both}
-.bx-soa-cart-t {float:left; color:#b1b1b1}
+.bx-soa-cart-t {float:left; color:#424242}
 .bx-soa-cart-d {float:right; color:#000}
 .bx-soa-cart-total-line-total {font-weight:bold; text-transform:uppercase; border-top:1px solid #ebebeb; padding:24px 0 0 0; margin:28px 0 0 0; color:#000; font-size:18px}
 
