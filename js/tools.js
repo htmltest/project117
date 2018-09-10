@@ -390,11 +390,56 @@ $(document).ready(function() {
     });
 
     $(window).on('load resize', function() {
-        $('.compare-list-sep').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
-        $('.compare-list-wrap .slick-dots').css({'top': curList.find('.catalogue-item-inner:first').outerHeight()});
+        $('.compare-list-sep').css({'top': $('.compare-list').find('.catalogue-item-inner:first').outerHeight()});
+        $('.compare-list-wrap .slick-dots').css({'top': $('.compare-list').find('.catalogue-item-inner:first').outerHeight()});
+    });
+
+    $('body').on('change', '.product-info .form-radio input', function(e) {
+        var curVariant = $('.product-info .form-radio input:checked');
+        $('.product-price-cost').html(curVariant.data('cost'));
+        $('.product-price-count').html(curVariant.data('count'));
+    });
+
+    $('body').on('change', '.catalogue-item .catalogue-item-count input', function(e) {
+        var curItem = $(this).parents().filter('.catalogue-item');
+        var curVariant = curItem.find('.catalogue-item-count input:checked');
+        curItem.find('.catalogue-item-price span').html(String(curVariant.data('cost')).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    });
+
+    $('body').on('change', '.basket-row-count .catalogue-item-count input', function(e) {
+        var curRow = $(this).parents().filter('.basket-row');
+        var curVariant = curRow.find('.basket-row-count .catalogue-item-count input:checked');
+        curRow.find('.basket-row-cost').html(String(curVariant.data('cost')).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+        recalcCart();
+    });
+
+    $('body').on('click', '.basket-delete a', function(e) {
+        $(this).parents().filter('.basket-row').remove();
+        recalcCart();
+        e.preventDefault();
     });
 
 });
+
+function recalcCart() {
+    var curSumm = 0;
+    $('.basket-form .basket-row').each(function() {
+        var curRow = $(this);
+        curSumm += Number(curRow.find('.basket-row-count input:checked').data('cost'));
+    });
+
+    var curDeliveryPrice = Number($('#basket-delivery').html().replace(' ', ''));
+
+    $('#basket-price').html(String(curSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    var allSumm = curSumm + curDeliveryPrice - Number($('#basket-discount').html().replace(' ', ''));
+    if (allSumm < 0) {
+        allSumm = 0;
+    }
+    if (curSumm == 0) {
+        $('.basket-results').hide();
+    }
+    $('#basket-summ').html(String(allSumm).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+}
 
 function reloadFilter() {
     $('.bx_filter_parameters_box_container').each(function() {
