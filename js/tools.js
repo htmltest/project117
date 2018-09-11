@@ -329,12 +329,16 @@ $(document).ready(function() {
             if ($(window).width() < 768) {
                 if (!curTab.find('.catalogue-list').hasClass('slick-slider')) {
                     curTab.find('.catalogue-list').slick({
-                        infinite: true,
+                        infinite: false,
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         adaptiveHeight: true,
                         arrows: false,
                         dots: true
+                    }).on('setPosition', function(slick) {
+                        $('.recommend-tab .catalogue-list').each(function() {
+                            resizeCatalogue($(this));
+                        });
                     });
                 }
             } else {
@@ -386,6 +390,9 @@ $(document).ready(function() {
             }
         ]
     }).on('setPosition', function(slick) {
+        $('.catalogue-list').each(function() {
+            resizeCatalogue($(this));
+        });
         $('.slick-dots').css({'top': $('.compare-list-wrap .catalogue-item-inner:first').outerHeight()});
     });
 
@@ -419,7 +426,76 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $(window).on('load resize', function() {
+        $('.catalogue-list').each(function() {
+            resizeCatalogue($(this));
+        });
+    });
+
 });
+
+function resizeCatalogue(curList) {
+    curList.find('.catalogue-item-photo').css({'min-height': '0px', 'line-height': '0px'});
+
+    curList.find('.catalogue-item-photo').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        curList.find('.catalogue-item-photo').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px', 'line-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px', 'line-height': newHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    curList.find('.catalogue-item-text-inner').css({'height': 'auto'});
+
+    curList.find('.catalogue-item-text-inner').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        curList.find('.catalogue-item-text-inner').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+    curList.find('.compare-info-row').css({'min-height': 0 + 'px'});
+
+    curList.find('.compare-info-row').each(function() {
+        var curBlock = $(this);
+        var curHeight = curBlock.height();
+        var curTop = curBlock.offset().top;
+
+        curList.find('.compare-info-row').each(function() {
+            var otherBlock = $(this);
+            if (otherBlock.offset().top == curTop) {
+                var newHeight = otherBlock.height();
+                if (newHeight > curHeight) {
+                    curBlock.css({'min-height': newHeight + 'px'});
+                } else {
+                    otherBlock.css({'min-height': curHeight + 'px'});
+                }
+            }
+        });
+    });
+
+}
 
 function recalcCart() {
     var curSumm = 0;
@@ -464,6 +540,20 @@ function initForm(curForm) {
 
     curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
     curForm.find('.soa-property-container select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
+
+    curForm.find('input[type="number"]').each(function() {
+        var curBlock = $(this).parent();
+        var curHTML = curBlock.html();
+        curBlock.html(curHTML.replace(/type=\"number\"/g, 'type="text"'));
+        curBlock.find('input').spinner();
+        curBlock.find('input').keypress(function(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 43 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        });
+    });
 
     curForm.find('.form-file input').change(function() {
         var curInput = $(this);
@@ -528,7 +618,6 @@ function checkErrors() {
         }
     });
 }
-
 
 function windowOpen(linkWindow, dataWindow, callbackWindow) {
     var curPadding = $('.wrapper').width();
