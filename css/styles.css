@@ -523,7 +523,7 @@ nav ul li.active a {color:#fff; background:#3f8efc}
 
 .main {background:#fff; margin:0 0 -35px 0; padding:0 0 60px 0}
 
-.slider {position:relative}
+.slider {position:relative; height:525px}
 .slider-content {font-size:0; line-height:0; letter-spacing:-1px; width:100%; white-space:nowrap}
 .slider-item {display:inline-block; vertical-align:top; width:1200px; white-space:normal}
 .slider-item-inner {display:block; text-decoration:none; background:#000 no-repeat center; margin:0 15px; height:525px; position:relative; overflow:hidden; color:#fff; padding:0; text-align:center}
@@ -564,7 +564,7 @@ nav ul li.active a {color:#fff; background:#3f8efc}
 }
 
 @media screen and (max-width:767px) {
-    .slider {margin:0 6px}
+    .slider {margin:0 6px; height:495px}
     .slider-item-inner {height:495px}
     .slider-item-content {height:495px}
     .slider .slick-prev,
