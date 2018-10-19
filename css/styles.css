@@ -526,13 +526,13 @@ nav ul li.active a {color:#fff; background:#3f8efc}
 .slider {position:relative; height:525px}
 .slider-content {font-size:0; line-height:0; letter-spacing:-1px; width:100%; white-space:nowrap}
 .slider-item {display:inline-block; vertical-align:top; width:1200px; white-space:normal}
-.slider-item-inner {display:block; text-decoration:none; background:#000 no-repeat center; margin:0 15px; height:525px; position:relative; overflow:hidden; color:#fff; padding:0; text-align:center}
+.slider-item-inner {display:table; width:calc(100% - 30px); text-decoration:none; background:#000 no-repeat center; margin:0 15px; position:relative; overflow:hidden; color:#fff; padding:0; text-align:center}
 @media screen and (min-width:1200px) {
     .slider-item-inner:hover {color:#fff}
 }
 .slider-item-content {display:table-cell; vertical-align:middle; height:525px; padding:0 30px}
-.slider-item-title {font-size:22px; line-height:25px; letter-spacing:0; font-weight:300}
-.slider-item-descr {font-size:12px; line-height:20px; letter-spacing:0; font-weight:300; padding:20px 0 0 0; text-transform:uppercase}
+.slider-item-title {font-size:24px; line-height:29px; letter-spacing:0; font-weight:300}
+.slider-item-descr {font-size:14px; line-height:14px; letter-spacing:0; font-weight:300; padding:20px 0 0 0; text-transform:uppercase}
 .slider-item-link {width:243px; margin:23px auto 0 auto}
 .slider-ctrl {position:absolute; left:50%; bottom:71px; transform:translateX(-50%); font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; text-align:center}
 .slider-ctrl a {display:inline-block; vertical-align:top; width:47px; height:2px; background:rgba(137, 137, 137, 0.35); margin:0 0 0 7px}
@@ -561,12 +561,12 @@ nav ul li.active a {color:#fff; background:#3f8efc}
     .slider-item {width:100%}
     .slider .slick-prev {right:auto; left:35px; margin-right:0}
     .slider .slick-next {left:auto; right:35px; margin-left:0}
+    .slider-item-content {padding:0 105px}
 }
 
 @media screen and (max-width:767px) {
     .slider {margin:0 6px; height:495px}
-    .slider-item-inner {height:495px}
-    .slider-item-content {height:495px}
+    .slider-item-content {height:495px; padding:0 3px}
     .slider .slick-prev,
     .slider .slick-next {display:none !important}
 }
