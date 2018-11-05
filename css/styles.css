@@ -526,13 +526,16 @@ nav ul li.active a {color:#fff; background:#3f8efc}
 .slider {position:relative; height:525px}
 .slider-content {font-size:0; line-height:0; letter-spacing:-1px; width:100%; white-space:nowrap}
 .slider-item {display:inline-block; vertical-align:top; width:1200px; white-space:normal}
-.slider-item-inner {display:table; width:calc(100% - 30px); text-decoration:none; background:#000 no-repeat center; margin:0 15px; position:relative; overflow:hidden; color:#fff; padding:0; text-align:center}
+.slider-item-inner {display:table; width:calc(100% - 30px); text-decoration:none; background:#000 no-repeat center; margin:0 15px; position:relative; overflow:hidden; color:#fff; padding:0}
 @media screen and (min-width:1200px) {
     .slider-item-inner:hover {color:#fff}
 }
-.slider-item-content {display:table-cell; vertical-align:middle; height:525px; padding:0 30px}
-.slider-item-title {font-size:24px; line-height:29px; letter-spacing:0; font-weight:300}
-.slider-item-descr {font-size:14px; line-height:14px; letter-spacing:0; font-weight:300; padding:20px 0 0 0; text-transform:uppercase}
+.slider-item-content {display:table-cell; vertical-align:middle; height:525px; padding:0 55px; position:relative}
+.slider-item-content::before {content:""; display:block; position:absolute; left:0; top:0; height:100%; width:488px; background:rgba(92, 0, 66, 0.7)}
+.slider-item-title {font-size:30px; line-height:36px; letter-spacing:0; font-weight:bold; position:relative; width:390px}
+.slider-item-text {font-size:16px; line-height:28px; letter-spacing:0; font-weight:normal; position:relative; width:380px; padding:9px 0 0 0}
+.slider-item-descr {font-size:14px; line-height:24px; letter-spacing:0; font-weight:normal; font-style:italic; position:relative; width:310px; padding:34px 0 0 0}
+.slider-item-descr::before {content:""; display:block; width:127px; height:1px; background:#fff; margin:0 0 13px 0}
 .slider-item-link {width:243px; margin:23px auto 0 auto}
 .slider-ctrl {position:absolute; left:50%; bottom:71px; transform:translateX(-50%); font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; text-align:center}
 .slider-ctrl a {display:inline-block; vertical-align:top; width:47px; height:2px; background:rgba(137, 137, 137, 0.35); margin:0 0 0 7px}
@@ -565,8 +568,9 @@ nav ul li.active a {color:#fff; background:#3f8efc}
 }
 
 @media screen and (max-width:767px) {
-    .slider {margin:0 6px; height:495px}
-    .slider-item-content {height:495px; padding:0 3px}
+    .slider {margin:0 -15px; height:495px}
+    .slider-item-content {height:495px; padding:0 30px}
+    .slider-item-content::before {width:100%}
     .slider .slick-prev,
     .slider .slick-next {display:none !important}
 }
